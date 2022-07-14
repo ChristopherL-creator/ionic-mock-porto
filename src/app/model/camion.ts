@@ -1,7 +1,6 @@
 export interface Camion {
-  id: string;
-  date: Date;
-  note: string;
-  val: number;
-  valid: boolean;
+  truckId: number;
+  truckCode: string;
+  truckDescr?: any;
+  position: number;
 }
