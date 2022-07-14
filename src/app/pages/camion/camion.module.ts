@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ChangeColorByPositionPipe } from 'src/app/pipes/change-color-by-position.pipe';
+import { ChangeColorByPositionPipe } from 'src/app/pipes/change-color-by-distance/change-color-by-position.pipe';
+import { AddEastOvestPipe } from 'src/app/pipes/add-east-ovest/add-east-ovest.pipe';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -18,8 +19,12 @@ import { CamionPage } from './camion.page';
   ],
   declarations: [
     CamionPage,
-    ChangeColorByPositionPipe
+    ChangeColorByPositionPipe,
+    AddEastOvestPipe
   ],
-  exports: [ChangeColorByPositionPipe]
+  exports: [
+    ChangeColorByPositionPipe,
+    ChangeColorByPositionPipe
+  ]
 })
 export class CamionPageModule {}
