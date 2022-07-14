@@ -5,27 +5,27 @@
 </ion-header>
 
 <ion-content>
-  <div class="camion-tab-container">
+  <div class="camion-grid-container">
     <ion-grid class="ion-grid-custom">
       <ion-row class="ion-text-center">
         <ion-col>
           <span>Truck Code</span>
         </ion-col>
-        <ion-col class="cell-custom-descr">
+        <ion-col class="cell-side-borders">
           <span>Description</span>
         </ion-col>
         <ion-col>
-          <span>Position</span>
+          <span>Position (m)</span>
         </ion-col>
       </ion-row>
-      <ion-row *ngFor="let camion of camionsArray; let i = index">
-        <ion-col class="ion-text-center cell-custom">
+      <ion-row class="row-color-change-by-position" *ngFor="let camion of camionsArray; let i = index">
+        <ion-col class="ion-text-center cell-top-border">
           <span>{{camion.truckCode}}</span>
         </ion-col>
-        <ion-col class="cell-custom cell-custom-descr">
+        <ion-col class="cell-top-border cell-side-borders">
           <span>{{camion.truckDescr}}</span>
         </ion-col>
-        <ion-col class="ion-text-center cell-custom">
+        <ion-col class="ion-text-center cell-top-border">
           <span>{{camion.position}}</span>
         </ion-col>
       </ion-row>

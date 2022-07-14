@@ -5,7 +5,7 @@ html,body{
   margin: 0px;
 }
 
-.camion-tab-container{
+.camion-grid-container{
   margin-top: 16px;
   display: grid;
   width: 100%;
@@ -18,12 +18,18 @@ html,body{
   border-radius: 12px;
 }
 
-.cell-custom{
+.cell-top-border{
   border-top: solid white 1px;
 }
 
-.cell-custom-descr{
+.cell-side-borders{
   border-left: solid white 1px;
   border-right: solid white 1px;
+}
+
+.row-color-change-by-position{
+  background-color: grey;
+  margin: 4px;
+  border-radius: 4px;
 }
 
