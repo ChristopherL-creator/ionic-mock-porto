@@ -7,25 +7,25 @@
 <ion-content>
   <div class="camion-tab-container">
     <ion-grid class="ion-grid-custom">
-      <ion-row>
+      <ion-row class="ion-text-center">
         <ion-col>
           <span>Truck Code</span>
         </ion-col>
-        <ion-col>
+        <ion-col class="cell-custom-descr">
           <span>Description</span>
         </ion-col>
-        <ion-col class="ion-text-center">
+        <ion-col>
           <span>Position</span>
         </ion-col>
       </ion-row>
       <ion-row *ngFor="let camion of camionsArray; let i = index">
-        <ion-col class="ion-text-center">
+        <ion-col class="ion-text-center cell-custom">
           <span>{{camion.truckCode}}</span>
         </ion-col>
-        <ion-col>
+        <ion-col class="cell-custom cell-custom-descr">
           <span>{{camion.truckDescr}}</span>
         </ion-col>
-        <ion-col class="ion-text-center">
+        <ion-col class="ion-text-center cell-custom">
           <span>{{camion.position}}</span>
         </ion-col>
       </ion-row>
