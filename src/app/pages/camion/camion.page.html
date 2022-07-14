@@ -18,7 +18,7 @@
           <span>Position (m)</span>
         </ion-col>
       </ion-row>
-      <ion-row class="row-color-change-by-position" *ngFor="let camion of camionsArray; let i = index">
+      <ion-row [style.backgroundColor]="camion.position | changeColorByPosition" class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
         <ion-col class="ion-text-center cell-top-border">
           <span>{{camion.truckCode}}</span>
         </ion-col>

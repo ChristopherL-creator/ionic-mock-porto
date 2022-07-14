@@ -13,5 +13,5 @@ export class CamionService {
   getCamions(): Observable<any>{
     console.log('service works!');
     return this.http.get(`${environment.camionUrl}`);
-  }
+  };
 }

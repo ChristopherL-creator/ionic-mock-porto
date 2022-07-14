@@ -4,3 +4,4 @@ export interface Camion {
   truckDescr?: any;
   position: number;
 }
+
