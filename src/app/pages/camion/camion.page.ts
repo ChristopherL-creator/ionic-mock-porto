@@ -15,10 +15,10 @@ export class CamionPage implements OnInit {
   constructor(private camionService: CamionService, private loadingControl: LoadingController) { }
 
   ngOnInit() {
-    // this.camionService.getCamions().subscribe({
-    //   result: res => console.log(res),
-    //   error: err => console.log(err)
-    // });
+    this.camionService.getCamions().subscribe({
+      next: res => console.log(res),
+      error: err => console.log(err)
+    });
   }
 
 }

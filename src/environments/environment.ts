@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  camionUrl: 'http://localhost:8080/api/invoices'
+  // camionUrl: 'http://localhost:8080/api/invoices'
+  camionUrl: '../assets/camion-json.json'
 };
 
 /*

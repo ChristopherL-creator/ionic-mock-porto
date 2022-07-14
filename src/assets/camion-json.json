@@ -1,0 +1,16 @@
+[
+  {
+      "id": "14_2022",
+      "date": "2022-02-16T23:00:00.000+00:00",
+      "note": "This is another note.",
+      "val": 765,
+      "valid": false
+  },
+  {
+      "id": "27_2022",
+      "date": "2022-03-20T23:00:00.000+00:00",
+      "note": "This is a note.",
+      "val": 1500,
+      "valid": true
+  }
+]
