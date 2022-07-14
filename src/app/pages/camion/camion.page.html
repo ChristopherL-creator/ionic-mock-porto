@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>camion</ion-title>
+    <ion-title>Lista Camion</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="camion-tab-container">
+    <ion-grid >
+      <ion-row *ngFor="let camion of camionsArray; let i = index">
+        <ion-col class="ion-text-center">
+          <ion-label>{{camion.id}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <ion-label>{{camion.note}}</ion-label>
+        </ion-col>
+        <ion-col class="ion-text-center">
+          <ion-label>{{camion.val}}</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 </ion-content>

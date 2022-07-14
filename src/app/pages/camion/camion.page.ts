@@ -10,13 +10,28 @@ import { CamionService } from 'src/app/services/camion.service';
 })
 export class CamionPage implements OnInit {
 
-  camion = [];
+  public camionsArray: Camion[] = [];
 
   constructor(private camionService: CamionService, private loadingControl: LoadingController) { }
 
   ngOnInit() {
+    this.loadCamions();
+  }
+
+  async loadCamions(){
+    const loadAnim = await this.loadingControl.create({
+      message: 'Caricamento...',
+      spinner: 'bubbles'
+    });
+    await loadAnim.present;
+
     this.camionService.getCamions().subscribe({
-      next: res => console.log(res),
+      next: camions => {
+        loadAnim.dismiss();
+        //  spingo elementi da res a this.camionsarray
+        this.camionsArray = camions;
+        console.log(camions);
+      },
       error: err => console.log(err)
     });
   }
