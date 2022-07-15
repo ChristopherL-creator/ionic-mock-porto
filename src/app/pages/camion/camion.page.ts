@@ -12,7 +12,7 @@ export class CamionPage implements OnInit {
 
   public camionsArray: Camion[] = [];
 
-  constructor(private camionService: CamionService, private loadingControl: LoadingController) { }
+  constructor(public camionService: CamionService, private loadingControl: LoadingController) { }
 
   ngOnInit() {
     this.loadCamions();

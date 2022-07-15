@@ -38,35 +38,35 @@
 
     <ion-grid class="camion-per-area-grid ion-text-center">
       <ion-row>
-        <ion-col>
-          <span>
+        <ion-col class="camion-area">
+          <div>
             Lontano
-          </span>
+          </div>
         </ion-col>
-        <ion-col>
-          <span>
+        <ion-col class="camion-area">
+          <div>
             Medio
-          </span>
+          </div>
         </ion-col>
-        <ion-col>
-          <span>
-            Ok
-          </span>
+        <ion-col class="camion-area">
+          <div>
+            Vicino
+          </div>
         </ion-col>
-        <ion-col>
-          <span>
+        <ion-col class="camion-area">
+          <div>
             Medio
-          </span>
+          </div>
         </ion-col>
-        <ion-col>
-          <span>
+        <ion-col class="camion-area">
+          <div>
             Lontano
-          </span>
+          </div>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col class="color-by-distance">
-          <span>
+          <span appCamionsPerZone [camion]="camionService.camion">
 
           </span>
         </ion-col>

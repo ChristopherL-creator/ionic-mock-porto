@@ -7,12 +7,13 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CamionsPerZoneDirective } from 'src/app/directives/camions-per-zone/camions-per-zone.directive';
 
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, CamionsPerZoneDirective],
   imports: [
             BrowserModule,
             IonicModule.forRoot(),
