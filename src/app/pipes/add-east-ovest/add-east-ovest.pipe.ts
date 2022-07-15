@@ -7,11 +7,11 @@ export class AddEastOvestPipe implements PipeTransform {
 
   transform(position: number, cardinal: string): string {
     if (position < 0) {
-      cardinal = 'E';
+      cardinal = ' Est';
     } else {
-      cardinal = 'O';
+      cardinal = ' Ovest';
     }
-    console.log(position);
+    
     return position + cardinal;
   }
 

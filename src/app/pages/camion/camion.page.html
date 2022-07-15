@@ -18,15 +18,21 @@
           <span>Position (m)</span>
         </ion-col>
       </ion-row>
-      <ion-row [style.backgroundColor]="camion.position | changeColorByPosition | addEastOvest"  class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
+      <ion-row [style.backgroundColor]="camion.position | changeColorByPosition"  class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
         <ion-col class="ion-text-center cell-top-border">
           <span>{{camion.truckCode}}</span>
         </ion-col>
+        <div class="divider">
+
+        </div>
         <ion-col class="cell-top-border cell-side-borders">
           <span>{{camion.truckDescr}}</span>
         </ion-col>
+        <div class="divider">
+
+        </div>
         <ion-col class="ion-text-center cell-top-border">
-          <span>{{camion.position}}</span>
+          <span>{{camion.position | addEastOvest}}</span>
         </ion-col>
       </ion-row>
     </ion-grid>

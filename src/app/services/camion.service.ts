@@ -11,7 +11,7 @@ export class CamionService {
   constructor(private http: HttpClient) { }
 
   getCamions(): Observable<any>{
-    console.log('service works!');
+    // console.log('service works!');
     return this.http.get(`${environment.camionUrl}`);
   };
 }

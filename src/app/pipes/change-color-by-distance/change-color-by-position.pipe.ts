@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ChangeColorByPositionPipe implements PipeTransform {
 
-  transform(position: number, ...args: unknown[]): string {
+  transform(position: number, ...args: unknown[]): any {
     if (position < -200 || position > 200) {
       return 'crimson';
     } else if (position > -200 && position < -100) {
