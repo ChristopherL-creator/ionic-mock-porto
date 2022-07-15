@@ -7,7 +7,9 @@ html,body{
 
 .camion-grid-container{
   margin-top: 16px;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   width: 100%;
   align-items: center;
 }
@@ -34,5 +36,17 @@ html,body{
 
 .divider{
 border: 1px solid whitesmoke;
+}
 
+.camion-per-area-grid{
+  width: 90%;
+  background-color: rgb(0, 60, 144);
+  border-radius: 12px;
+}
+
+.color-by-distance{
+  background-color: grey;
+  margin: 4px;
+  border-radius: 4px;
+  padding: 4px;
 }
