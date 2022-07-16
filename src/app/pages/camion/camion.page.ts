@@ -12,6 +12,39 @@ export class CamionPage implements OnInit {
 
   public camionsArray: Camion[] = [];
 
+  public result = {
+    lontanoEstArray: [],
+    medioEstArray: [],
+    vicinoArray: [],
+    medioOvestArray: [],
+    lontanoOvestArray: [],
+  }
+
+  public areas = [
+    {
+      area: -200,
+      id: 1
+    },
+    {
+      area: -100,
+      id: 2
+    },
+    {
+      area: 100,
+      id: 3
+    },
+    {
+      area: 200,
+      id: 4
+    },
+  ];
+
+  areas.forEach( el => {
+    el.area =< -200 ? lontanoEstArray.push(el) :
+
+  });
+
+
   constructor(public camionService: CamionService, private loadingControl: LoadingController) { }
 
   ngOnInit() {
@@ -35,5 +68,7 @@ export class CamionPage implements OnInit {
       error: err => console.log(err)
     });
   }
+
+
 
 }
