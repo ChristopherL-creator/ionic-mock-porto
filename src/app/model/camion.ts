@@ -5,13 +5,6 @@ export interface Camion {
   position: number;
 }
 
-export interface PositionAggregator extends Camion{
-  lontanoEstArray: string[];
-  medioEstArray: string[];
-  vicinoArray: string[];
-  medioOvestArray: string[];
-  lontanoOvestArray: string[];
-}
 
 
 

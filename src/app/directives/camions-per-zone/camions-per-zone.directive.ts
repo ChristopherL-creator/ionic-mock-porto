@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import { Camion, PositionAggregator } from 'src/app/model/camion';
+import { PositionAggregator } from '../../model/PositionAggregator';
 
 @Directive({
   selector: '[appCamionsPerZone]'
@@ -14,9 +14,12 @@ export class CamionsPerZoneDirective {
 
   constructor(private el: ElementRef) { }
 
-  initElement( positionAggregator: PositionAggregator | undefined){
+  initElement( positionAggregator: PositionAggregator | undefined): void{
+    console.log('direttiva');
 
-    this.el.nativeElement.innerHTML = positionAggregator.lontanoEstArray.length;
+    if (positionAggregator.lontanoEstArray != null) {
+      this.el.nativeElement.innerHTML = positionAggregator.lontanoEstArray.length;
+    }
   }
 
 }
