@@ -16,7 +16,7 @@ export class CamionPage implements OnInit {
 
   ngOnInit() {
     this.loadCamions();
-
+    this.sortCamions();
   }
 
   async loadCamions(){
@@ -37,6 +37,8 @@ export class CamionPage implements OnInit {
     });
   }
 
-
+  sortCamions(){
+    this.camionService.sortByPosition();
+  }
 
 }

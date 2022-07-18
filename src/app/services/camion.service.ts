@@ -20,20 +20,27 @@ export class CamionService {
     return this.http.get(`${environment.camionUrl}`);
   };
 
-  sortByPosition(camion: Camion) {
+  sortByPosition() {
+    console.log('sortbyworks!');
+
     // for (const iterator of object) {
-      if (camion.position <= -200) {
-        this.positionAggregator.lontanoEstArray.push(camion.truckCode);
-      } else if (camion.position > -200 && camion.position <= -100) {
-        this.positionAggregator.medioEstArray.push(camion.truckCode);
-      } else if (camion.position > -100 && camion.position < 100) {
-        this.positionAggregator.vicinoArray.push(camion.truckCode);
-      } else if (camion.position >= 100 && camion.position < 200) {
-        this.positionAggregator.medioOvestArray.push(camion.truckCode);
-      } else if (camion.position >= 200) {
-        this.positionAggregator.lontanoOvestArray.push(camion.truckCode);
-      };
+      // if (camion.position <= -200) {
+      //   this.positionAggregator.lontanoEstArray.push(camion.truckCode);
+      // } else if (camion.position > -200 && camion.position <= -100) {
+      //   this.positionAggregator.medioEstArray.push(camion.truckCode);
+      // } else if (camion.position > -100 && camion.position < 100) {
+      //   this.positionAggregator.vicinoArray.push(camion.truckCode);
+      // } else if (camion.position >= 100 && camion.position < 200) {
+      //   this.positionAggregator.medioOvestArray.push(camion.truckCode);
+      // } else if (camion.position >= 200) {
+      //   this.positionAggregator.lontanoOvestArray.push(camion.truckCode);
+      // };
     // }
+    if (this.camion.position <= -200) {
+      this.positionAggregator.lontanoEstArray.push(this.camion.truckCode);
+      console.log(this.positionAggregator.lontanoEstArray);
+    }
+
   }
 
 }
