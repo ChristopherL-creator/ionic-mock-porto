@@ -36,7 +36,7 @@ export class CamionPage implements OnInit {
           const camion = camions[i];
           console.log(this.camionsArray[i].position);
 //  richiamo funzione sortbypos, e ci inifilo ciascun camion di camions
-          this.sortByPosition(camion);
+          this.camionService.sortByPosition(camion);
         }
       },
       error: err => console.log(err)
@@ -44,27 +44,5 @@ export class CamionPage implements OnInit {
 
   }
 
-//  ci iniflo interfaccia camion per accedere a sue proprietà
-  sortByPosition(camion: Camion) {
-    console.log('camion nome',camion.truckCode,'camion posizione', camion.position);
 
-    // console.log('sortbyworks!');
-
-    if (camion.position <= -200) {
-      this.camionService.positionAggregator.lontanoEstArray.push(camion.truckCode);
-      console.log(this.camionService.positionAggregator.lontanoEstArray);
-    // } else if (camion.position > -200 && camion.position <= -100) {
-    //   this.camionService.positionAggregator.lontanoEstArray.push(camion.truckCode);
-    //   console.log(this.camionService.positionAggregator.medioEstArray);
-    // } else if (camion.position > -100 && camion.position < 100) {
-    //   this.camionService.positionAggregator.lontanoEstArray.push(camion.truckCode);
-    //   console.log(this.camionService.positionAggregator.vicinoArray);
-    // } else if (camion.position >= 100 && camion.position < 200) {
-    //   this.camionService.positionAggregator.lontanoEstArray.push(camion.truckCode);
-    //   console.log(this.camionService.positionAggregator.medioOvestArray);
-    // } else if (camion.position >= 200) {
-    //   this.camionService.positionAggregator.lontanoEstArray.push(camion.truckCode);
-    //   console.log(this.camionService.positionAggregator.lontanoOvestArray);
-    };
-  }
 }
