@@ -10,7 +10,7 @@ import { IonicModule } from '@ionic/angular';
 import { CamionPageRoutingModule } from './camion-routing.module';
 
 import { CamionPage } from './camion.page';
-import { CamionsPerZoneDirective } from 'src/app/directives/camions-per-zone/camions-per-zone.directive';
+
 
 @NgModule({
   imports: [
@@ -24,13 +24,11 @@ import { CamionsPerZoneDirective } from 'src/app/directives/camions-per-zone/cam
     ChangeColorByPositionPipe,
     AddEastOvestPipe,
     PositivePositionPipe,
-    CamionsPerZoneDirective
   ],
   exports: [
     ChangeColorByPositionPipe,
     AddEastOvestPipe,
     PositivePositionPipe,
-    CamionsPerZoneDirective
   ]
 })
 export class CamionPageModule {}
