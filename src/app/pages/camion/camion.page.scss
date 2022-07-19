@@ -31,20 +31,6 @@ html,body{
 border: 1px solid whitesmoke;
 }
 
-.camion-per-area-grid{
-  display: grid;
-  width: 90%;
-  background-color: rgb(0, 60, 144);
-  border-radius: 12px;
-
-}
-
-.color-by-distance{
-  background-color: grey;
-  margin: 4px;
-  border-radius: 4px;
-  padding: 4px;
-}
 
 .position-col{
   display: flex;
@@ -52,6 +38,53 @@ border: 1px solid whitesmoke;
   gap: 4px;
 }
 
+.camion-per-area-grid{
+  height: 100%;
+  display: grid;
+  width: 90%;
+  background-color: rgb(0, 60, 144);
+  border-radius: 12px;
+}
+
 .camion-area{
-  padding: 2px 0px;
+  font-size: large;
+  padding: 4px 0px;
+}
+
+.camions-by-position-row{
+  height: fit-content;
+}
+
+.color-by-distance.lontano{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: crimson;
+  margin: 0px 2px;
+  border-radius: 8px;
+  height: 45px;
+  font-size: x-large;
+}
+
+.color-by-distance.medio{
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 2px;
+  border-radius: 8px;
+  height: 45px;
+  font-size: x-large;
+}
+
+.color-by-distance.vicino{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: green;
+  border-radius: 4px;
+  margin: 0px 2px;
+  border-radius: 8px;
+  height: 45px;
+  font-size: x-large;
 }
