@@ -28,14 +28,20 @@ html,body{
 }
 
 .divider{
+  width: 0px;
 border: 1px solid whitesmoke;
 }
 
 
 .position-col{
-  display: flex;
-  justify-content: center;
-  gap: 4px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+}
+
+.camion-position-col{
+  justify-self: end;
+  padding-right: 4px;
 }
 
 .camion-per-area-grid{

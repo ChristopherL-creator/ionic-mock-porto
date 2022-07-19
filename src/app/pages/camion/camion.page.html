@@ -30,8 +30,8 @@
         <div class="divider">
         </div>
         <ion-col class="position-col">
-          <span>{{camion.position | positivePosition}}</span>
-          <span>{{camion.position | addEastOvest}}</span>
+          <div class="camion-position-col">{{camion.position | positivePosition}}</div>
+          <div class="camion-cardinal-col">{{camion.position | addEastOvest}}</div>
         </ion-col>
       </ion-row>
     </ion-grid>
@@ -40,12 +40,12 @@
       <ion-row>
         <ion-col class="camion-area">
           <div>
-            E
+            O
           </div>
         </ion-col>
         <ion-col class="camion-area">
           <div>
-            O
+            E
           </div>
         </ion-col>
       </ion-row>
