@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista Camion</ion-title>
+    <ion-title>Camion</ion-title>
+    <ion-menu-button slot="start" menu="custom"></ion-menu-button>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +20,7 @@
         </ion-col>
       </ion-row>
       <ion-row [style.backgroundColor]="camion.position | changeColorByPosition"  class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
-        <ion-col class="ion-text-center ">
+        <ion-col class="ion-text-center">
           <span>{{camion.truckCode}}</span>
         </ion-col>
         <div class="divider">
