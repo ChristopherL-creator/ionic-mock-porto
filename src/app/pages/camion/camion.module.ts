@@ -11,6 +11,7 @@ import { CamionPageRoutingModule } from './camion-routing.module';
 
 import { CamionPage } from './camion.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
@@ -22,12 +23,12 @@ import { CamionPage } from './camion.page';
     CamionPage,
     ChangeColorByPositionPipe,
     AddEastOvestPipe,
-    PositivePositionPipe
+    PositivePositionPipe,
   ],
   exports: [
     ChangeColorByPositionPipe,
     AddEastOvestPipe,
-    PositivePositionPipe
+    PositivePositionPipe,
   ]
 })
 export class CamionPageModule {}

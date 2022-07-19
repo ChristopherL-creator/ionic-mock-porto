@@ -40,54 +40,40 @@
       <ion-row>
         <ion-col class="camion-area">
           <div>
-            Lontano
+            E
           </div>
         </ion-col>
         <ion-col class="camion-area">
           <div>
-            Medio
-          </div>
-        </ion-col>
-        <ion-col class="camion-area">
-          <div>
-            Vicino
-          </div>
-        </ion-col>
-        <ion-col class="camion-area">
-          <div>
-            Medio
-          </div>
-        </ion-col>
-        <ion-col class="camion-area">
-          <div>
-            Lontano
+            O
           </div>
         </ion-col>
       </ion-row>
+
       <ion-row>
         <ion-col class="color-by-distance">
-          <span appCamionsPerZone [camion]="camionService.camion">
-
+          <span>
+            {{camionService.positionAggregator.lontanoEstArray.length}}
           </span>
         </ion-col>
         <ion-col class="color-by-distance">
           <span>
-
+            {{camionService.positionAggregator.medioEstArray.length}}
           </span>
         </ion-col>
         <ion-col class="color-by-distance">
           <span>
-
+            {{camionService.positionAggregator.vicinoArray.length}}
           </span>
         </ion-col>
         <ion-col class="color-by-distance">
           <span>
-
+            {{camionService.positionAggregator.medioOvestArray.length}}
           </span>
         </ion-col>
         <ion-col class="color-by-distance">
           <span >
-
+            {{camionService.positionAggregator.lontanoOvestArray.length}}
           </span>
         </ion-col>
       </ion-row>

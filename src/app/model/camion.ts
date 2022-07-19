@@ -1,7 +1,10 @@
 export interface Camion {
-  truckId: number;
+  truckId: string;
   truckCode: string;
   truckDescr?: any;
   position: number;
 }
+
+
+
 

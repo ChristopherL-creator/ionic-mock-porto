@@ -30,10 +30,19 @@ export class CamionPage implements OnInit {
         loadAnim.dismiss();
         //  spingo elementi da res a this.camionsarray
         this.camionsArray = camions;
-        console.log(camions);
+
+//  ciclo camions per accadere alla posizione di ciascun camion
+        for (let i = 0; i < camions.length; i++) {
+          const camion = camions[i];
+          console.log(this.camionsArray[i].position);
+//  richiamo funzione sortbypos, e ci inifilo ciascun camion di camions
+          this.camionService.sortByPosition(camion);
+        }
       },
       error: err => console.log(err)
     });
+
   }
+
 
 }
