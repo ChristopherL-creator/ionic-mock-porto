@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+
 
 @Component({
   selector: 'app-impostazioni',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ImpostazioniPage implements OnInit {
 
-  constructor() { }
+  language: string = this.translateServ.currentLang;
+
+  constructor(private translateServ: TranslateService) { }
 
   ngOnInit() {
+  }
+
+  languageChange() {
+    this.translateServ.use(this.language);
   }
 
 }
