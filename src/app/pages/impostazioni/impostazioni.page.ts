@@ -19,6 +19,8 @@ export class ImpostazioniPage implements OnInit {
   languageChange(language: string){
     console.log(language);
     this.translateServ.use(language);
+    localStorage.setItem('myConfig', language);
+    window.location.reload();
   }
 
 
