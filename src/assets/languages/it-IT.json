@@ -14,7 +14,9 @@
     "descr": "Descrizione",
     "position": "Posizione",
     "west": "Ovest",
-    "east": "Est"
+    "east": "Est",
+    "west-short": "O",
+    "east-short": "E"
   },
   "SETTINGS":{
     "page-name": "Impostazioni",
