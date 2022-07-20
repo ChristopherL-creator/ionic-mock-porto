@@ -1,6 +1,7 @@
 {
   "MENU": {
     "current-language": "IT",
+    "menu": "Menu",
     "truck": "Camion",
     "home": "Home",
     "crane-selection": "Selezione Gru",
@@ -9,6 +10,7 @@
   },
 
   "TRUCKS":{
+    "page-name": "Camion",
     "truck-code": "Codice Camion",
     "descr": "Descrizione",
     "position": "Posizione",

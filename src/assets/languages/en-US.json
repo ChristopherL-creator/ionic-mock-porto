@@ -1,7 +1,7 @@
 {
   "MENU": {
     "current-language": "EN",
-    "truck": "Trucks",
+    "menu": "Menu",
     "home": "Home",
     "crane-selection": "Select Crane",
     "settings": "Settings",
@@ -9,6 +9,7 @@
   },
 
   "TRUCKS":{
+    "page-name": "Trucks",
     "truck-code": "Truck Code",
     "descr": "Description",
     "position": "Position",
