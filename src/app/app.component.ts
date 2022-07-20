@@ -7,7 +7,9 @@ import { TranslateService } from '@ngx-translate/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor(private translateServ: TranslateService) { this.initializeApp(); }
+  constructor(private translateServ: TranslateService) {
+    this.initializeApp();
+  }
 
   initializeApp(){
 //  funzione per estrarre lingua da json creati

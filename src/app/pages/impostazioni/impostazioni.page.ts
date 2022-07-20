@@ -16,8 +16,11 @@ export class ImpostazioniPage implements OnInit {
   ngOnInit() {
   }
 
-  languageChange() {
-    this.translateServ.use(this.language);
+  languageChange(language: string){
+    console.log(language);
+    this.translateServ.use(language);
   }
+
+
 
 }

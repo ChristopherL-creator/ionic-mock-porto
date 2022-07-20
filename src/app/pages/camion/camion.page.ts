@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { Camion } from 'src/app/model/camion';
-import { CamionService } from 'src/app/services/camion.service';
+import { CamionService } from 'src/app/services/camion-service/camion.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({

@@ -14,7 +14,7 @@
         <ion-label>{{'SETTINGS.choose-language-label' | translate}}</ion-label>
         <ion-select
           [(ngModel)]='language'
-          (ionChange)='languageChange()'
+          (ionChange)='languageChange(language)'
           [placeholder]='"SETTINGS.placeholder" | translate'
         >
           <ion-select-option value='it-IT'>{{'SETTINGS.it-option' | translate}}</ion-select-option>
