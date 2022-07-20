@@ -1,6 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Lista Camion</ion-title>
+    <ion-title>{{'TRUCKS.page-name' | translate}}</ion-title>
+    <ion-menu-button slot="start" menu="custom"></ion-menu-button>
   </ion-toolbar>
 </ion-header>
 
@@ -9,17 +10,17 @@
     <ion-grid class="ion-grid-custom">
       <ion-row class="ion-text-center">
         <ion-col>
-          <span>Truck Code</span>
+          <span>{{'TRUCKS.truck-code' | translate}}</span>
         </ion-col>
         <ion-col>
-          <span>Description</span>
+          <span>{{'TRUCKS.descr' | translate}}</span>
         </ion-col>
         <ion-col>
-          <span>Position (m)</span>
+          <span>{{'TRUCKS.position' | translate}}</span>
         </ion-col>
       </ion-row>
       <ion-row [style.backgroundColor]="camion.position | changeColorByPosition"  class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
-        <ion-col class="ion-text-center ">
+        <ion-col class="ion-text-center">
           <span>{{camion.truckCode}}</span>
         </ion-col>
         <div class="divider">

@@ -1,0 +1,26 @@
+{
+  "MENU": {
+    "current-language": "IT",
+    "menu": "Menu",
+    "truck": "Camion",
+    "home": "Home",
+    "crane-selection": "Selezione Gru",
+    "settings": "Impostazioni",
+    "logout": "Logout"
+  },
+  "TRUCKS":{
+    "page-name": "Camion",
+    "truck-code": "Codice Camion",
+    "descr": "Descrizione",
+    "position": "Posizione",
+    "west": "Ovest",
+    "east": "Est"
+  },
+  "SETTINGS":{
+    "page-name": "Impostazioni",
+    "choose-language-label": "Lingua: ",
+    "placeholder": "Scegli",
+    "it-option": "Italiano",
+    "en-option": "Inglese"
+  }
+}

@@ -1,3 +1,23 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="custom" contentId="main-menu" class="custom-menu" >
+    <ion-header>
+      <ion-menu-toggle>
+        <ion-toolbar>
+          <ion-title>{{'MENU.menu' | translate}}</ion-title>
+          <ion-title slot="end">{{'MENU.current-language' | translate}}</ion-title>
+        </ion-toolbar>
+      </ion-menu-toggle>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/camion']">{{'MENU.home' | translate}}</ion-item>
+          <ion-item [routerLink]="['/homepage']">{{'MENU.crane-selection' | translate}}</ion-item>
+          <ion-item [routerLink]="['/impostazioni']">{{'MENU.settings' | translate}}</ion-item>
+          <ion-item>{{'MENU.logout' | translate}}</ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main-menu"></ion-router-outlet>
 </ion-app>

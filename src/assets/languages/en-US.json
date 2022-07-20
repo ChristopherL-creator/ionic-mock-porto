@@ -1,0 +1,26 @@
+{
+  "MENU": {
+    "current-language": "EN",
+    "menu": "Menu",
+    "home": "Home",
+    "crane-selection": "Select Crane",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+
+  "TRUCKS":{
+    "page-name": "Trucks",
+    "truck-code": "Truck Code",
+    "descr": "Description",
+    "position": "Position",
+    "west": "West",
+    "east": "East"
+  },
+  "SETTINGS":{
+    "page-name": "Settings",
+    "choose-language-label": "Language: ",
+    "placeholder": "Choose",
+    "it-option": "Italian",
+    "en-option": "English"
+  }
+}

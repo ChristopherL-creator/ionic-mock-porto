@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{'SETTINGS.page-name' | translate}}</ion-title>
+    <ion-menu-button slot="start" menu="custom"></ion-menu-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <!--  other stuff -->
+    <ion-card-content>
+      <p></p>
+      <ion-item> <!-- add this block -->
+        <ion-label>{{'SETTINGS.choose-language-label' | translate}}</ion-label>
+        <ion-select
+          [(ngModel)]='language'
+          (ionChange)='languageChange(language)'
+          [placeholder]='"SETTINGS.placeholder" | translate'
+        >
+          <ion-select-option value='it-IT'>{{'SETTINGS.it-option' | translate}}</ion-select-option>
+          <ion-select-option value='en-US'>{{'SETTINGS.en-option' | translate}}</ion-select-option>
+        </ion-select>
+      </ion-item> <!-- add this block (end) -->
+    </ion-card-content>
+  </ion-card>
+</ion-content>
