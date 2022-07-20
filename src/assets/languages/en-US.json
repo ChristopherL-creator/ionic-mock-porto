@@ -1,0 +1,18 @@
+{
+  "MENU": {
+    "current-language": "EN",
+    "truck": "Trucks",
+    "home": "Home",
+    "crane-selection": "Select Crane",
+    "settings": "Settings",
+    "logout": "Logout"
+  },
+
+  "TRUCKS":{
+    "truck-code": "Truck Code",
+    "descr": "Description",
+    "position": "Position",
+    "west": "West",
+    "east": "East"
+  }
+}

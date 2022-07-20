@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { Camion } from 'src/app/model/camion';
 import { CamionService } from 'src/app/services/camion.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-camion',
@@ -10,9 +11,11 @@ import { CamionService } from 'src/app/services/camion.service';
 })
 export class CamionPage implements OnInit {
 
+  language: string = this.translateServ.currentLang;
+
   public camionsArray: Camion[] = [];
 
-  constructor(public camionService: CamionService, private loadingControl: LoadingController) { }
+  constructor(public camionService: CamionService, private loadingControl: LoadingController, private translateServ: TranslateService) { }
 
   ngOnInit() {
     this.loadCamions();

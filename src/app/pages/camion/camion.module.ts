@@ -6,11 +6,17 @@ import { AddEastOvestPipe } from 'src/app/pipes/add-east-ovest/add-east-ovest.pi
 import { PositivePositionPipe } from 'src/app/pipes/positive-position/positive-position.pipe';
 
 import { IonicModule } from '@ionic/angular';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { CamionPageRoutingModule } from './camion-routing.module';
 
 import { CamionPage } from './camion.page';
+import { HttpClient } from '@angular/common/http';
 
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/languages/', '.json');
+}
 
 @NgModule({
   imports: [
@@ -18,6 +24,14 @@ import { CamionPage } from './camion.page';
     FormsModule,
     IonicModule,
     CamionPageRoutingModule,
+    TranslateModule.forChild({
+      loader: {
+        provide: TranslateLoader,
+        useFactory:
+          createTranslateLoader,
+          deps: [HttpClient]
+      }
+    })
   ],
   declarations: [
     CamionPage,
