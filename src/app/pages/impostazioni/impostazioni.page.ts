@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { LanguageService } from 'src/app/services/language-service/language-service';
 
 
 @Component({
@@ -11,18 +12,12 @@ export class ImpostazioniPage implements OnInit {
 
   language: string = this.translateServ.currentLang;
 
-  constructor(private translateServ: TranslateService) { }
+  constructor(private translateServ: TranslateService, private langServ: LanguageService) { }
 
   ngOnInit() {
   }
 
-  languageChange(language: string){
-    console.log(language);
-    this.translateServ.use(language);
-    localStorage.setItem('myConfig', language);
-    window.location.reload();
+  languageChange(){
+    this.langServ.languageChange(this.language);
   }
-
-
-
 }

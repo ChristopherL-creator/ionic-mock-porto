@@ -14,7 +14,10 @@
     "descr": "Description",
     "position": "Position",
     "west": "West",
-    "east": "East"
+    "east": "East",
+    "west-short": "W",
+    "east-short": "E"
+
   },
   "SETTINGS":{
     "page-name": "Settings",
