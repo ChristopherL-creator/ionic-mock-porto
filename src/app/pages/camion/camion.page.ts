@@ -11,6 +11,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class CamionPage implements OnInit {
 
+//  importato translateservice, e inserito nel costruttore, inizializzo langiage:
   language: string = this.translateServ.currentLang;
 
   public camionsArray: Camion[] = [];

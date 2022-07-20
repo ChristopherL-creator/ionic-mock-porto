@@ -11,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
+//  tramite loader infilo indirizzo base da cui prendere jsons lingue
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/languages/', '.json');
 }
@@ -27,7 +28,8 @@ export function createTranslateLoader(http: HttpClient) {
               loader: {
                 provide: TranslateLoader,
                 useFactory:
-                  (createTranslateLoader),
+                (createTranslateLoader),
+                //  funzione che scriverò dopo, prima di ng module
                   deps: [HttpClient]
               }
             })

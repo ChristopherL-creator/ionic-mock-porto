@@ -14,9 +14,10 @@ export class AppComponent {
   }
 
   initializeApp(){
-//  funzione per estrarre lingua da json creati
+//  funzione per scegliare lingua di default, richiamo nome json
     this.translateServ.setDefaultLang('it-IT');
 
+//  carico lingua salvata da impostazioni
     this.platform.ready().then(() => {
       this.translateServ.use(localStorage['myConfig']);
     });

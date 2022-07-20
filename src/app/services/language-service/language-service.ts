@@ -6,12 +6,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class LanguageService {
 
-  language: string = this.translateServ.currentLang;
-
-  constructor( private translateServ: TranslateService) { }
+  constructor(private translateServ: TranslateService) { }
 
   languageChange(language: string){
-    console.log(language);
+    // console.log(language);
     this.translateServ.use(language);
     localStorage.setItem('myConfig', language);
     window.location.reload();

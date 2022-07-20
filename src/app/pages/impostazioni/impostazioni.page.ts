@@ -18,6 +18,7 @@ export class ImpostazioniPage implements OnInit {
   }
 
   languageChange(){
+//  rivhiamo funzione da service, per farl innnescare con ionchange
     this.langServ.languageChange(this.language);
   }
 }
