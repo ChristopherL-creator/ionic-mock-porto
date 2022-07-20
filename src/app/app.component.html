@@ -10,10 +10,12 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>{{'MENU.home' | translate}}</ion-item>
-        <ion-item>{{'MENU.crane-selection' | translate}}</ion-item>
-        <ion-item>{{'MENU.settings' | translate}}</ion-item>
-        <ion-item>{{'MENU.logout' | translate}}</ion-item>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/camion']">{{'MENU.home' | translate}}</ion-item>
+          <ion-item>{{'MENU.crane-selection' | translate}}</ion-item>
+          <ion-item [routerLink]="['/impostazioni']">{{'MENU.settings' | translate}}</ion-item>
+          <ion-item>{{'MENU.logout' | translate}}</ion-item>
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

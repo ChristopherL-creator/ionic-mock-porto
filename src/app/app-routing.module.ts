@@ -9,15 +9,18 @@ const routes: Routes = [
   },
   {
     path: 'camion',
-    loadChildren: () => import('./pages/camion/camion.module').then( m => m.CamionPageModule)
+    loadChildren: () => import('./pages/camion/camion.module')
+    .then( m => m.CamionPageModule)
   },
   {
     path: 'impostazioni',
-    loadChildren: () => import('./pages/impostazioni/impostazioni.module').then( m => m.ImpostazioniPageModule)
+    loadChildren: () => import('./pages/impostazioni/impostazioni.module')
+    .then( m => m.ImpostazioniPageModule)
   },
   {
     path: 'homepage',
-    loadChildren: () => import('./pages/homepage/homepage.module').then( m => m.HomepagePageModule)
+    loadChildren: () => import('./pages/homepage/homepage.module')
+    .then( m => m.HomepagePageModule)
   },
 ];
 
