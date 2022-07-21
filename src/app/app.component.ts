@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Platform } from '@ionic/angular';
+import { GruService } from './services/gru/gru.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
 
-  constructor(private translateServ: TranslateService, private platform: Platform) {
+  constructor(private translateServ: TranslateService, private platform: Platform, public gruServ: GruService) {
     this.initializeApp();
   }
 
