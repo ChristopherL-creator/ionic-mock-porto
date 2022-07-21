@@ -24,9 +24,9 @@ export class CamionService {
     this.positionAggregator.lontanoOvestArray = [];
   }
 
-  getCamions(): Observable<any>{
+  getCamions(): Observable<Camion[]>{
     // console.log('service works!');
-    return this.http.get(`${environment.camionUrl}`);
+    return this.http.get<Camion[]>(`${environment.camionUrl}`);
   };
 
   //  ci iniflo interfaccia camion per accedere a sue proprietà
