@@ -1,0 +1,42 @@
+import { Component, OnInit } from '@angular/core';
+import { LoadingController } from '@ionic/angular';
+import { TranslateService } from '@ngx-translate/core';
+import { Gru } from 'src/app/model/gru';
+import { GruService } from 'src/app/services/gru/gru.service';
+
+@Component({
+  selector: 'app-gru-select',
+  templateUrl: './gru-select.page.html',
+  styleUrls: ['./gru-select.page.scss'],
+})
+export class GruSelectPage implements OnInit {
+
+  public grusArray: Gru[] = [];
+
+  constructor(
+    private gruServ: GruService,
+    private loadingControl: LoadingController,
+    private translateServ: TranslateService
+    ) { }
+
+  ngOnInit() {
+    this.loadGrus();
+  }
+
+  async loadGrus(){
+    const loadAnim = await this.loadingControl.create({
+      message: 'Caricamento...',
+      spinner: 'bubbles'
+    });
+    await loadAnim.present;
+
+    this.gruServ.getGrus().subscribe({
+      next: grus => {
+        loadAnim.dismiss();
+        this.grusArray = grus;
+        console.log(this.grusArray);
+      },
+      error: err => console.log(err)
+    });
+  }
+}
