@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'camion',
+    redirectTo: 'gru-select',
     pathMatch: 'full'
   },
   {
@@ -16,9 +16,16 @@ const routes: Routes = [
     path: 'impostazioni',
     loadChildren: () => import('./pages/impostazioni/impostazioni.module')
     .then( m => m.ImpostazioniPageModule)
-  },  {
+  },
+  {
     path: 'gru-select',
-    loadChildren: () => import('./pages/gru-select/gru-select.module').then( m => m.GruSelectPageModule)
+    loadChildren: () => import('./pages/gru-select/gru-select.module')
+    .then( m => m.GruSelectPageModule)
+  },
+  {
+    path: 'gru-select/:id',
+    loadChildren: () => import('./pages/camion/camion.module')
+    .then( m => m.CamionPageModule)
   }
 
 ];
