@@ -23,4 +23,5 @@ export class AppComponent {
       this.translateServ.use(localStorage['myConfig']);
     });
   }
+
 }

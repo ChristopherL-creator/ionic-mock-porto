@@ -19,6 +19,4 @@ export class GruService {
 
     return this.http.get<Gru[]>(`${environment.gruUrl}`);
   };
-
-
 }

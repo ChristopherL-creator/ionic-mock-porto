@@ -4,9 +4,9 @@
       <ion-menu-toggle>
         <ion-toolbar>
           <ion-title>{{'MENU.menu' | translate}}</ion-title>
-          <ion-title *ngIf="gruServ.gru">Gru {{gruServ.gru.id}}</ion-title>
           <ion-title slot="end">{{'MENU.current-language' | translate}}</ion-title>
         </ion-toolbar>
+        <ion-title *ngIf="gruServ.gru">Gru {{gruServ.gru.id}}</ion-title>
       </ion-menu-toggle>
     </ion-header>
     <ion-content>
