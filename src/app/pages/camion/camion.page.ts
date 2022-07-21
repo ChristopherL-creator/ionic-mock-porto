@@ -16,7 +16,11 @@ export class CamionPage implements OnInit {
 
   public camionsArray: Camion[] = [];
 
-  constructor(public camionService: CamionService, private loadingControl: LoadingController, private translateServ: TranslateService) { }
+  constructor(
+    public camionService: CamionService,
+    private loadingControl: LoadingController,
+    private translateServ: TranslateService
+    ) { }
 
   ngOnInit() {
     this.loadCamions();
@@ -32,7 +36,7 @@ export class CamionPage implements OnInit {
     this.camionService.getCamions().subscribe({
       next: camions => {
         loadAnim.dismiss();
-        //  spingo elementi da res a this.camionsarray
+//  spingo elementi da res a this.camionsarray
         this.camionsArray = camions;
 
 //  ciclo camions per accadere alla posizione di ciascun camion

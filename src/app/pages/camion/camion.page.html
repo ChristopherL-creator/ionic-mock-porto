@@ -19,7 +19,11 @@
           <span>{{'TRUCKS.position' | translate}}</span>
         </ion-col>
       </ion-row>
-      <ion-row [style.backgroundColor]="camion.position | changeColorByPosition"  class="row-color-change-by-position"  *ngFor="let camion of camionsArray; let i = index">
+      <ion-row
+        [style.backgroundColor]="camion.position | changeColorByPosition"
+        class="row-color-change-by-position"
+        *ngFor="let camion of camionsArray; let i = index"
+      >
         <ion-col class="ion-text-center">
           <span>{{camion.truckCode}}</span>
         </ion-col>
@@ -50,7 +54,6 @@
           </div>
         </ion-col>
       </ion-row>
-
       <ion-row class="camions-by-position-row">
         <ion-col class="color-by-distance lontano">
           <div>

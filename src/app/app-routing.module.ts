@@ -16,12 +16,11 @@ const routes: Routes = [
     path: 'impostazioni',
     loadChildren: () => import('./pages/impostazioni/impostazioni.module')
     .then( m => m.ImpostazioniPageModule)
-  },
-  {
-    path: 'homepage',
-    loadChildren: () => import('./pages/homepage/homepage.module')
-    .then( m => m.HomepagePageModule)
-  },
+  },  {
+    path: 'gru-select',
+    loadChildren: () => import('./pages/gru-select/gru-select.module').then( m => m.GruSelectPageModule)
+  }
+
 ];
 
 @NgModule({

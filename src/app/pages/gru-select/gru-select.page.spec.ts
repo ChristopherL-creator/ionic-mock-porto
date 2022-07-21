@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { HomepagePage } from './homepage.page';
+import { GruSelectPage } from './gru-select.page';
 
-describe('HomepagePage', () => {
-  let component: HomepagePage;
-  let fixture: ComponentFixture<HomepagePage>;
+describe('GruSelectPage', () => {
+  let component: GruSelectPage;
+  let fixture: ComponentFixture<GruSelectPage>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomepagePage ],
+      declarations: [ GruSelectPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(HomepagePage);
+    fixture = TestBed.createComponent(GruSelectPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

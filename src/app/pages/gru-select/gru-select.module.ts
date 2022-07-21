@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { HomepagePageRoutingModule } from './homepage-routing.module';
+import { GruSelectPageRoutingModule } from './gru-select-routing.module';
 
-import { HomepagePage } from './homepage.page';
+import { GruSelectPage } from './gru-select.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomepagePageRoutingModule
+    GruSelectPageRoutingModule
   ],
-  declarations: [HomepagePage]
+  declarations: [GruSelectPage]
 })
-export class HomepagePageModule {}
+export class GruSelectPageModule {}

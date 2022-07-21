@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  camionUrl: 'http://localhost:12000/api/truckpos'
-  // camionUrl: '../assets/camion-json.json'
+  camionUrl: 'http://localhost:12000/api/truckpos',
+  gruUrl: 'https://628d3321a3fd714fd040dac4.mockapi.io/cranes'
 };
 
 /*
