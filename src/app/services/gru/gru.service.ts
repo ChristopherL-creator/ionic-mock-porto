@@ -13,10 +13,12 @@ export class GruService {
 
   constructor(private http: HttpClient) { }
 
-  getGrus(): Observable<any>{
+  getGrus(val?: string): Observable<Gru[]>{
 
     console.log('crane service works!');
 
-    return this.http.get(`${environment.gruUrl}`);
+    return this.http.get<Gru[]>(`${environment.gruUrl}`);
   };
+
+
 }

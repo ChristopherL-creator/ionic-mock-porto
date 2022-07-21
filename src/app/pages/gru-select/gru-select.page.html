@@ -3,8 +3,15 @@
     <ion-title>Seleziona Gru</ion-title>
     <ion-menu-button slot="start" menu="custom"></ion-menu-button>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar type="number" [(ngModel)]="searchGru" (ionChange)="autocompleteGru($event)"></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content fullscreen>
+  <div>
+    <ion-list>
+      <ion-item *ngFor="let gru of grusArray">Gru {{gru.id}}</ion-item>
+    </ion-list>
+  </div>
 </ion-content>

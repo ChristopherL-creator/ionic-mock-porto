@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Gru } from 'src/app/model/gru';
@@ -11,12 +11,16 @@ import { GruService } from 'src/app/services/gru/gru.service';
 })
 export class GruSelectPage implements OnInit {
 
+  public searchGru = '';
+
+  public gruSearchList = [];
+
   public grusArray: Gru[] = [];
 
   constructor(
     private gruServ: GruService,
     private loadingControl: LoadingController,
-    private translateServ: TranslateService
+    private translateServ: TranslateService,
     ) { }
 
   ngOnInit() {
@@ -39,4 +43,21 @@ export class GruSelectPage implements OnInit {
       error: err => console.log(err)
     });
   }
+
+  autocompleteGru(event: any){
+
+    const val: string = event.target.value;
+    console.log(val);
+
+    this.gruServ.getGrus(val).subscribe({
+      next: gruSearchList => {
+        this.grusArray = gruSearchList.filter((gru) => {
+          return (gru.id.indexOf(val) > -1);
+        });
+        console.log(this.grusArray);
+      },
+      error: err => console.log(err)
+    });
+  }
+
 }
