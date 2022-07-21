@@ -18,11 +18,7 @@ export class CamionService {
 
   constructor(private http: HttpClient, private route: ActivatedRoute) {
 //  nel costruttore di service inizializzo arrays di PosAggr come vuote
-    this.positionAggregator.lontanoEstArray = [];
-    this.positionAggregator.medioEstArray = [];
-    this.positionAggregator.vicinoArray = [];
-    this.positionAggregator.medioOvestArray = [];
-    this.positionAggregator.lontanoOvestArray = [];
+    this.clearPositionAggr();
   }
 
   getCamions(): Observable<Camion[]>{
@@ -30,10 +26,16 @@ export class CamionService {
     return this.http.get<Camion[]>(`${environment.camionUrl}`);
   };
 
-  //  ci iniflo interfaccia camion per accedere a sue proprietà
+  clearPositionAggr(){
+    this.positionAggregator.lontanoEstArray = [];
+    this.positionAggregator.medioEstArray = [];
+    this.positionAggregator.vicinoArray = [];
+    this.positionAggregator.medioOvestArray = [];
+    this.positionAggregator.lontanoOvestArray = [];
+  }
+
   sortByPosition(camion: Camion) {
-    console.log('camion nome',camion.truckCode,'camion posizione', camion.position);
-    // console.log('sortbyworks!');
+    // console.log('camion nome',camion.truckCode,'camion posizione', camion.position);
 
     if (camion.position <= -200) {
       this.positionAggregator.lontanoEstArray.push(camion.truckCode);
@@ -51,5 +53,6 @@ export class CamionService {
       this.positionAggregator.lontanoOvestArray.push(camion.truckCode);
     };
   }
+  //  ci iniflo interfaccia camion per accedere a sue proprietà
 
 }

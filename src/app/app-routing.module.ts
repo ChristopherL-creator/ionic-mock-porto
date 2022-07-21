@@ -8,19 +8,14 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'camion',
-    loadChildren: () => import('./pages/camion/camion.module')
-    .then( m => m.CamionPageModule)
+    path: 'gru-select',
+    loadChildren: () => import('./pages/gru-select/gru-select.module')
+    .then( m => m.GruSelectPageModule)
   },
   {
     path: 'impostazioni',
     loadChildren: () => import('./pages/impostazioni/impostazioni.module')
     .then( m => m.ImpostazioniPageModule)
-  },
-  {
-    path: 'gru-select',
-    loadChildren: () => import('./pages/gru-select/gru-select.module')
-    .then( m => m.GruSelectPageModule)
   },
   {
     path: 'gru-select/:id',

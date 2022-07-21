@@ -3,6 +3,7 @@ import { LoadingController } from '@ionic/angular';
 import { Camion } from 'src/app/model/camion';
 import { CamionService } from 'src/app/services/camion-service/camion.service';
 import { TranslateService } from '@ngx-translate/core';
+import { PositionAggregator } from 'src/app/model/position-aggregator';
 
 @Component({
   selector: 'app-camion',
@@ -15,6 +16,8 @@ export class CamionPage implements OnInit {
   language: string = this.translateServ.currentLang;
 
   public camionsArray: Camion[] = [];
+
+  private positionAggregator = {} as PositionAggregator;
 
   constructor(
     public camionService: CamionService,
@@ -38,19 +41,16 @@ export class CamionPage implements OnInit {
         loadAnim.dismiss();
 //  spingo elementi da res a this.camionsarray
         this.camionsArray = camions;
-
+        this.camionService.clearPositionAggr();
 //  ciclo camions per accadere alla posizione di ciascun camion
         for (let i = 0; i < camions.length; i++) {
           const camion = camions[i];
-          console.log(this.camionsArray[i].position);
+          console.log(camions);
 //  richiamo funzione sortbypos, e ci inifilo ciascun camion di camions
           this.camionService.sortByPosition(camion);
         }
       },
       error: err => console.log(err)
     });
-
   }
-
-
 }
