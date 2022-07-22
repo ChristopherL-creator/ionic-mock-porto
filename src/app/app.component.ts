@@ -10,7 +10,11 @@ import { GruService } from './services/gru/gru.service';
 })
 export class AppComponent {
 
-  constructor(private translateServ: TranslateService, private platform: Platform, public gruServ: GruService) {
+  constructor(
+    private translateServ: TranslateService,
+    private platform: Platform,
+    public gruServ: GruService
+    ) {
     this.initializeApp();
   }
 

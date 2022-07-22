@@ -4,18 +4,23 @@
     <ion-menu-button slot="start" menu="custom"></ion-menu-button>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar type="number" [(ngModel)]="searchGru" (ionChange)="autocompleteGru($event)"></ion-searchbar>
+    <ion-searchbar
+    type="number"
+    [(ngModel)]="searchGru"
+    (ionChange)="autocompleteGru($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   <div>
-    <ion-list >
+    <ion-list>
       <ion-item
-      *ngFor="let gru of grusArray"
-      [routerLink]="[gru.craneCode]"
-      >
-        <div class="ion-item-flex">{{'GRU-SELECTION.gru' | translate}} {{gru.id}}</div>
+       *ngFor="let gru of grusArray, let i = index"
+        [routerLink]="[gru.craneCode]"
+        (ionChange)="loginGru()"
+        [(ngModel)]="selectedCraneCode"
+        ngDefaultControl>
+        {{'GRU-SELECTION.gru' | translate}} {{gru.id}}
       </ion-item>
     </ion-list>
   </div>

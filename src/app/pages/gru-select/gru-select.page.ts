@@ -4,6 +4,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Gru } from 'src/app/model/gru';
 import { GruService } from 'src/app/services/gru/gru.service';
 
+
 @Component({
   selector: 'app-gru-select',
   templateUrl: './gru-select.page.html',
@@ -12,6 +13,8 @@ import { GruService } from 'src/app/services/gru/gru.service';
 export class GruSelectPage implements OnInit {
 
   public searchGru = '';
+
+  public selectedCraneCode = '';
 
   public gruSearchList = [];
 
@@ -51,7 +54,7 @@ export class GruSelectPage implements OnInit {
     const val: string = event.target.value;
     console.log(val);
 
-    this.gruServ.getGrus(val).subscribe({
+    this.gruServ.getGrus().subscribe({
       next: gruSearchList => {
         this.grusArray = gruSearchList.filter((gru) => {
           return (gru.id.indexOf(val) > -1);
@@ -60,6 +63,10 @@ export class GruSelectPage implements OnInit {
       },
       error: err => console.log(err)
     });
+  }
+
+  loginGru(){
+    this.gruServ.loginGru(this.selectedCraneCode);
   }
 
 }
