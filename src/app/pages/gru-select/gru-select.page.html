@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Seleziona Gru</ion-title>
+    <ion-title>{{'GRU-SELECTION.page-name' | translate}}</ion-title>
     <ion-menu-button slot="start" menu="custom"></ion-menu-button>
   </ion-toolbar>
   <ion-toolbar>
@@ -12,11 +12,10 @@
   <div>
     <ion-list >
       <ion-item
-
       *ngFor="let gru of grusArray"
       [routerLink]="[gru.id]"
       >
-        <div class="ion-item-flex">Gru {{gru.id}}</div>
+        <div class="ion-item-flex">{{'GRU-SELECTION.gru' | translate}} {{gru.id}}</div>
       </ion-item>
     </ion-list>
   </div>

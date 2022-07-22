@@ -17,6 +17,8 @@ export class GruSelectPage implements OnInit {
 
   public grusArray: Gru[] = [];
 
+  language: string = this.translateServ.currentLang;
+
   constructor(
     private gruServ: GruService,
     private loadingControl: LoadingController,

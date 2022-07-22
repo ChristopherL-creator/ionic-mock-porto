@@ -25,5 +25,10 @@
     "placeholder": "Choose",
     "it-option": "Italian",
     "en-option": "English"
+  },
+  "GRU-SELECTION":{
+    "page-name": "Select Crane",
+    "choose-crane-label": "Select: ",
+    "gru": "Crane"
   }
 }
