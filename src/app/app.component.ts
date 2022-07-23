@@ -10,6 +10,8 @@ import { GruService } from './services/gru/gru.service';
 })
 export class AppComponent {
 
+
+
   constructor(
     private translateServ: TranslateService,
     private platform: Platform,
@@ -28,4 +30,5 @@ export class AppComponent {
     });
   }
 
+  
 }

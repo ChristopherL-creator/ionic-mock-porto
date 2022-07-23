@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Gru } from 'src/app/model/gru';
 import { environment } from 'src/environments/environment';
 
@@ -10,22 +9,29 @@ import { environment } from 'src/environments/environment';
 })
 export class GruService {
 
-  public gru: Gru;
+  private grus = new BehaviorSubject<Gru[]>([]);
 
-  constructor(private http: HttpClient, private router: Router) { }
+  public selectedGrus = this.grus.asObservable();
+
+  constructor(private http: HttpClient) {
+    this.getGrus().subscribe({
+      next: grus => {
+        this.grus.next(grus);
+        console.log(grus);
+      },
+      error: err => console.log(err)
+    });
+  }
 
   getGrus(): Observable<Gru[]>{
-
     console.log('crane service works!');
 
     return this.http.get<Gru[]>(`${environment.gruUrl}`);
   };
 
-  loginGru(selectedCraneCode: string){
-    const url = environment.gruUrl + '?craneCode=' + selectedCraneCode;
-    this.http.get<Gru[]>(url).subscribe({
-      next: res => console.log(res),
-      error: err => console.log(err)
-    });
+  setGru(gru){
+
+    this.grus.next(gru);
+    console.log(gru.craneCode);
   }
 }

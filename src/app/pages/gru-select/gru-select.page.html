@@ -15,11 +15,9 @@
   <div>
     <ion-list>
       <ion-item
-       *ngFor="let gru of grusArray, let i = index"
-        [routerLink]="[gru.craneCode]"
-        (ionChange)="loginGru()"
-        [(ngModel)]="selectedCraneCode"
-        ngDefaultControl>
+       *ngFor="let gru of grusArray"
+       (click)="onSelectedGru(gru)"
+        [routerLink]="[gru.craneCode]">
         {{'GRU-SELECTION.gru' | translate}} {{gru.id}}
       </ion-item>
     </ion-list>

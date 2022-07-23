@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import { TranslateService } from '@ngx-translate/core';
 import { Gru } from 'src/app/model/gru';
@@ -14,11 +14,13 @@ export class GruSelectPage implements OnInit {
 
   public searchGru = '';
 
-  public selectedCraneCode = '';
+  public selectedGru: Gru[] = [];
 
   public gruSearchList = [];
 
   public grusArray: Gru[] = [];
+
+  public gru: any;
 
   language: string = this.translateServ.currentLang;
 
@@ -30,6 +32,9 @@ export class GruSelectPage implements OnInit {
 
   ngOnInit() {
     this.loadGrus();
+    this.gruServ.selectedGrus.subscribe((value) => {
+      this.selectedGru = value;
+    });
   }
 
   async loadGrus(){
@@ -65,8 +70,7 @@ export class GruSelectPage implements OnInit {
     });
   }
 
-  loginGru(){
-    this.gruServ.loginGru(this.selectedCraneCode);
+  onSelectedGru(gru){
+    this.gruServ.setGru(gru);
   }
-
 }

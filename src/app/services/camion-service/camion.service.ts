@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { PositionAggregator } from '../../model/position-aggregator';
 import { Camion } from '../../model/camion';
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +15,7 @@ export class CamionService {
 //  inizializzo interfaccia PosAggr per accedere a proprietà:
   public positionAggregator = {} as PositionAggregator;
 
-  constructor(private http: HttpClient, private route: ActivatedRoute) {
+  constructor(private http: HttpClient) {
 //  nel costruttore di service inizializzo arrays di PosAggr come vuote
     this.clearPositionAggr();
   }
