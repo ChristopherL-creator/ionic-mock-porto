@@ -30,8 +30,8 @@ export class GruService {
   };
 
   setGru(gru){
-
     this.grus.next(gru);
-    console.log(gru.craneCode);
+    
+    console.log(gru);
   }
 }
