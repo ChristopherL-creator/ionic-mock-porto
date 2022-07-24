@@ -20,8 +20,6 @@ export class GruSelectPage implements OnInit {
 
   public grusArray: Gru[] = [];
 
-  public gru: any;
-
   language: string = this.translateServ.currentLang;
 
   constructor(
@@ -70,7 +68,7 @@ export class GruSelectPage implements OnInit {
     });
   }
 
-  onSelectedGru(gru){
-    this.gruServ.setGru(gru);
+  onSelectedGru(gru: { id: Gru[] }){
+    this.gruServ.setGru(gru.id);
   }
 }
