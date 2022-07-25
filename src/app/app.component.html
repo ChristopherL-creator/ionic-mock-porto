@@ -6,7 +6,9 @@
           <ion-title>{{'MENU.menu' | translate}}</ion-title>
           <ion-title slot="end">{{'MENU.current-language' | translate}}</ion-title>
         </ion-toolbar>
-        <ion-title *ngIf="gruServ.grus">{{'GRU-SELECTION.gru' | translate}} {{selectedGru | async | json}}</ion-title>
+        <div>
+          <ion-title>{{selectedGru | async | json}}</ion-title>
+        </div>
       </ion-menu-toggle>
     </ion-header>
     <ion-content>

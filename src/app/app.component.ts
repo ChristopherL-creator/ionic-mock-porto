@@ -12,7 +12,9 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent {
 
-  public selectedGru: Observable<Gru[]>;
+  public selectedGru?: Observable<Gru[] | undefined> = undefined;
+
+  public currentGru: undefined;
 
   constructor(
     private translateServ: TranslateService,
@@ -31,11 +33,14 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.translateServ.use(localStorage['myConfig']);
     });
-    
+
     this.selectedGru = this.gruServ.selectedGrus;
 
     this.selectedGru.subscribe({
-      next: currentGru => console.log(currentGru),
+      next: currentGru => {
+        console.log(currentGru);
+        // this.currentGru = currentGru;
+      },
       error: err => console.log((err))
       }
     );

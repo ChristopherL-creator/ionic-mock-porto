@@ -18,7 +18,7 @@ const routes: Routes = [
     .then( m => m.ImpostazioniPageModule)
   },
   {
-    path: 'gru-select/:craneCode',
+    path: 'gru-select/:id',
     loadChildren: () => import('./pages/camion/camion.module')
     .then( m => m.CamionPageModule)
   }

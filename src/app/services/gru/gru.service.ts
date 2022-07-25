@@ -9,14 +9,14 @@ import { environment } from 'src/environments/environment';
 })
 export class GruService {
 
-  public grus? = new BehaviorSubject<Gru[]>([]);
+  public grus? = new BehaviorSubject<Gru[] | undefined>(undefined);
 
   public selectedGrus = this.grus.asObservable();
 
   constructor(private http: HttpClient) {
     this.getGrus().subscribe({
       next: grus => {
-        this.grus.next(grus);
+        this.grus.next(undefined);
         console.log(grus);
       },
       error: err => console.log(err)

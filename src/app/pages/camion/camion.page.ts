@@ -41,6 +41,7 @@ export class CamionPage implements OnInit {
       error: err => console.log((err))
       }
     );
+
   }
 
   async loadCamions(){

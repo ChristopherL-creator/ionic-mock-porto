@@ -4,7 +4,6 @@ import { TranslateService } from '@ngx-translate/core';
 import { Gru } from 'src/app/model/gru';
 import { GruService } from 'src/app/services/gru/gru.service';
 
-
 @Component({
   selector: 'app-gru-select',
   templateUrl: './gru-select.page.html',
@@ -68,7 +67,8 @@ export class GruSelectPage implements OnInit {
     });
   }
 
-  onSelectedGru(gru: { id: Gru[] }){
+  onSelectedGru(gru){
     this.gruServ.setGru(gru.id);
+    localStorage.setItem('myConfig1', gru.id);
   }
 }
