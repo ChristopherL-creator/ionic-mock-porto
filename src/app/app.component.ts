@@ -31,6 +31,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.translateServ.use(localStorage['myConfig']);
     });
+    
     this.selectedGru = this.gruServ.selectedGrus;
 
     this.selectedGru.subscribe({
