@@ -31,6 +31,7 @@ export class GruService {
 
   setGru(gru): void{
     this.grus.next(gru);
+    localStorage.setItem('savedGru', JSON.stringify(gru));
     console.log(gru);
   }
 }

@@ -7,14 +7,14 @@
           <ion-title slot="end">{{'MENU.current-language' | translate}}</ion-title>
         </ion-toolbar>
         <div>
-          <ion-title>{{selectedGru | async | json}}</ion-title>
+          <ion-title id="side-menu-gru"></ion-title>
         </div>
       </ion-menu-toggle>
     </ion-header>
     <ion-content>
       <ion-list>
         <ion-menu-toggle>
-          <ion-item [routerLink]="['/gru-select/', currentGru]">{{'MENU.home' | translate}}</ion-item>
+          <ion-item [routerLink]="['/gru-select/', gruServ.grus.id | async | json]">{{'MENU.home' | translate}}</ion-item>
           <ion-item [routerLink]="['/gru-select']">{{'MENU.crane-selection' | translate}}</ion-item>
           <ion-item [routerLink]="['/impostazioni']">{{'MENU.settings' | translate}}</ion-item>
           <ion-item>{{'MENU.logout' | translate}}</ion-item>

@@ -20,7 +20,6 @@ export class AppComponent {
     public gruServ: GruService
     ) {
         this.initializeApp();
-
       }
 
   initializeApp(): void{
@@ -30,6 +29,9 @@ export class AppComponent {
 //  carico lingua salvata da impostazioni
     this.platform.ready().then(() => {
       this.translateServ.use(localStorage['myConfig']);
+      const savedGruConfig = JSON.parse(localStorage.getItem('savedGru'));
+      console.log('loaded', savedGruConfig);
+
     });
 
     this.selectedGru = this.gruServ.selectedGrus;
@@ -41,6 +43,8 @@ export class AppComponent {
       error: err => console.log((err))
       }
     );
+
+
   }
 
 
