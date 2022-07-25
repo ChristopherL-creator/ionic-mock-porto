@@ -33,5 +33,6 @@ export class GruService {
     this.grus.next(gru);
     localStorage.setItem('savedGru', JSON.stringify(gru));
     console.log(gru);
+    window.location.reload();
   }
 }

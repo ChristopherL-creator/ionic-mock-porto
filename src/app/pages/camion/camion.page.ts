@@ -42,6 +42,8 @@ export class CamionPage implements OnInit {
       }
     );
 
+    const savedGruConfig = JSON.parse(localStorage.getItem('savedGru'));
+    document.getElementById('camion-page-gru').innerHTML = savedGruConfig;
   }
 
   async loadCamions(){
