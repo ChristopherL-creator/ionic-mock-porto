@@ -14,8 +14,6 @@ export class AppComponent {
 
   public selectedGru?: Observable<Gru[] | undefined> = undefined;
 
-  public currentGru: undefined;
-
   constructor(
     private translateServ: TranslateService,
     private platform: Platform,
@@ -39,7 +37,6 @@ export class AppComponent {
     this.selectedGru.subscribe({
       next: currentGru => {
         console.log(currentGru);
-        // this.currentGru = currentGru;
       },
       error: err => console.log((err))
       }

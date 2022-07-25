@@ -69,6 +69,5 @@ export class GruSelectPage implements OnInit {
 
   onSelectedGru(gru){
     this.gruServ.setGru(gru.id);
-    localStorage.setItem('myConfig1', gru.id);
   }
 }

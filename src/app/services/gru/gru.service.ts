@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 })
 export class GruService {
 
-  public grus? = new BehaviorSubject<Gru[] | undefined>(undefined);
+  public grus? = new BehaviorSubject<Gru[] | undefined>(this.grus);
 
   public selectedGrus = this.grus.asObservable();
 
@@ -29,9 +29,8 @@ export class GruService {
     return this.http.get<Gru[]>(`${environment.gruUrl}`);
   };
 
-  setGru(gru: Gru[]): void{
+  setGru(gru): void{
     this.grus.next(gru);
-
     console.log(gru);
   }
 }

@@ -14,7 +14,7 @@
     <ion-content>
       <ion-list>
         <ion-menu-toggle>
-          <ion-item [routerLink]="['/gru-select']">{{'MENU.home' | translate}}</ion-item>
+          <ion-item [routerLink]="['/gru-select/', currentGru]">{{'MENU.home' | translate}}</ion-item>
           <ion-item [routerLink]="['/gru-select']">{{'MENU.crane-selection' | translate}}</ion-item>
           <ion-item [routerLink]="['/impostazioni']">{{'MENU.settings' | translate}}</ion-item>
           <ion-item>{{'MENU.logout' | translate}}</ion-item>
