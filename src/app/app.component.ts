@@ -31,6 +31,8 @@ export class AppComponent {
       this.translateServ.use(localStorage['myConfig']);
       const savedGruConfig = JSON.parse(localStorage.getItem('savedGru'));
       console.log('loaded', savedGruConfig);
+      document.getElementById('side-menu-gru').innerHTML = savedGruConfig;
+
 
     });
 
