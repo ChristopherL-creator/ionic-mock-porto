@@ -34,13 +34,13 @@ export class CamionPage implements OnInit {
   ngOnInit() {
     this.loadCamions();
 
-    this.selectedGru = this.gruServ.selectedGrus;
+    // this.selectedGru = this.gruServ.selectedGrus;
 
-    this.selectedGru.subscribe({
-      next: currentGru => console.log(currentGru),
-      error: err => console.log((err))
-      }
-    );
+    // this.selectedGru.subscribe({
+    //   next: currentGru => console.log(currentGru),
+    //   error: err => console.log((err))
+    //   }
+    // );
 
     const savedGruConfig = JSON.parse(localStorage.getItem('savedGru'));
     document.getElementById('camion-page-gru').innerHTML = savedGruConfig;

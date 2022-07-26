@@ -16,8 +16,7 @@
     <ion-list>
       <ion-item
        *ngFor="let gru of grusArray"
-       (click)="onSelectedGru(gru)"
-        [routerLink]="[gru.id]">
+       (click)="onSelectedGru(gru)">
         {{'GRU-SELECTION.gru' | translate}} {{gru.id}}
       </ion-item>
     </ion-list>
