@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 //  tramite loader infilo indirizzo base da cui prendere jsons lingue
 export function createTranslateLoader(http: HttpClient) {
@@ -32,7 +33,8 @@ export function createTranslateLoader(http: HttpClient) {
                 //  funzione che scriverò dopo, prima di ng module
                   deps: [HttpClient]
               }
-            })
+            }),
+            FormsModule
           ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -17,6 +17,15 @@ export class CamionService {
 
   constructor(private http: HttpClient) {
 //  nel costruttore di service inizializzo arrays di PosAggr come vuote
+    this.clearPositionAggr();
+  }
+
+  getCamions(): Observable<Camion[]>{
+    // console.log('service works!');
+    return this.http.get<Camion[]>(`${environment.camionUrl}`);
+  };
+
+  clearPositionAggr(){
     this.positionAggregator.lontanoEstArray = [];
     this.positionAggregator.medioEstArray = [];
     this.positionAggregator.vicinoArray = [];
@@ -24,37 +33,25 @@ export class CamionService {
     this.positionAggregator.lontanoOvestArray = [];
   }
 
-  getCamions(): Observable<any>{
-    // console.log('service works!');
-    return this.http.get(`${environment.camionUrl}`);
-  };
-
-  //  ci iniflo interfaccia camion per accedere a sue proprietà
   sortByPosition(camion: Camion) {
-    console.log('camion nome',camion.truckCode,'camion posizione', camion.position);
-
-    // console.log('sortbyworks!');
+    // console.log('camion nome',camion.truckCode,'camion posizione', camion.position);
 
     if (camion.position <= -200) {
       this.positionAggregator.lontanoEstArray.push(camion.truckCode);
-      // console.log(this.camionService.positionAggregator.lontanoEstArray);
 
     } else if (camion.position > -200 && camion.position <= -100) {
       this.positionAggregator.medioEstArray.push(camion.truckCode);
-      // console.log(this.camionService.positionAggregator.medioEstArray);
 
     } else if (camion.position > -100 && camion.position < 100) {
       this.positionAggregator.vicinoArray.push(camion.truckCode);
-      // console.log(this.camionService.positionAggregator.vicinoArray);
 
     } else if (camion.position >= 100 && camion.position < 200) {
       this.positionAggregator.medioOvestArray.push(camion.truckCode);
-      // console.log(this.camionService.positionAggregator.medioOvestArray);
 
     } else if (camion.position >= 200) {
       this.positionAggregator.lontanoOvestArray.push(camion.truckCode);
-      // console.log(this.camionService.positionAggregator.lontanoOvestArray);
     };
   }
+  //  ci iniflo interfaccia camion per accedere a sue proprietà
 
 }

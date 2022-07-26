@@ -24,5 +24,10 @@
     "placeholder": "Scegli",
     "it-option": "Italiano",
     "en-option": "Inglese"
+  },
+    "GRU-SELECTION":{
+    "page-name": "Seleziona Gru",
+    "choose-crane-label": "Seleziona: ",
+    "gru": "Gru"
   }
 }
