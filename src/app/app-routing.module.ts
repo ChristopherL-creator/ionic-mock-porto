@@ -21,7 +21,13 @@ const routes: Routes = [
     path: 'gru-select/:id',
     loadChildren: () => import('./pages/camion/camion.module')
     .then( m => m.CamionPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./pages/login/login.module')
+    .then( m => m.LoginPageModule)
   }
+
 
 ];
 

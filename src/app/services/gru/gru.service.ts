@@ -16,13 +16,14 @@ export class GruService {
 
   constructor(private http: HttpClient,
     private router: Router) {
-    this.getGrus().subscribe({
-      next: grus => {
-        this.grus.next(undefined);
-        console.log(grus);
-      },
-      error: err => console.log(err)
-    });
+
+    // this.getGrus().subscribe({
+    //   next: grus => {
+    //     this.grus.next(undefined);
+    //     console.log(grus);
+    //   },
+    //   error: err => console.log(err)
+    // });
   }
 
   getGrus(): Observable<Gru[]>{
